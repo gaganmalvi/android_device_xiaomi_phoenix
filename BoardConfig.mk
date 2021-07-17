@@ -123,7 +123,6 @@ BOARD_KERNEL_CMDLINE += androidboot.memcg=1 cgroup.memory=nokmem,nosocket
 BOARD_KERNEL_CMDLINE += kpti=off
 
 # TARGET_KERNEL_APPEND_DTB handling
-BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_KERNEL_APPEND_DTB := false
 
 # Set header version for bootimage
