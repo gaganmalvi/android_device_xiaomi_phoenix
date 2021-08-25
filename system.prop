@@ -41,8 +41,5 @@ telephony.lteOnCdmaDevice=1
 # Recovery
 ro.recovery.ui.margin_height=48
 
-# Shutdown
-ro.build.shutdown_timeout=2
-
 # WiFi
 wifi.interface=wlan0
