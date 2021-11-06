@@ -1,0 +1,14 @@
+# Camera
+camera.sensor.rearMain.fuseID      u:object_r:vendor_camera_prop:s0
+camera.sensor.frontAux.fuseID      u:object_r:vendor_camera_prop:s0
+camera.sensor.frontMain.fuseID     u:object_r:vendor_camera_prop:s0
+camera.sensor.rearUltra.fuseID     u:object_r:vendor_camera_prop:s0
+camera.sensor.rearTele.fuseID      u:object_r:vendor_camera_prop:s0
+
+# Xiaomi specific build properties
+ro.boot.hwc                        u:object_r:build_prop:s0
+ro.boot.hwversion                  u:object_r:build_prop:s0
+ro.build.flavor                    u:object_r:build_prop:s0
+ro.cust.test                       u:object_r:build_prop:s0
+ro.miui.                           u:object_r:build_prop:s0
+ro.product.mod_device              u:object_r:build_prop:s0
