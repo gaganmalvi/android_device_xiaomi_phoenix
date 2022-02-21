@@ -111,7 +111,7 @@ BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
 
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CONFIG := phoenix_defconfig
+TARGET_KERNEL_CONFIG := vendor/phoenix_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/phoenix
 
 BOARD_KERNEL_CMDLINE += androidboot.hardware=qcom
