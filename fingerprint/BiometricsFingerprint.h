@@ -19,12 +19,7 @@
 #define ANDROID_HARDWARE_BIOMETRICS_FINGERPRINT_V2_3_BIOMETRICSFINGERPRINT_H
 
 
-#ifdef ENABLE_UDFPS
-#include <android-base/unique_fd.h>
-#include "hardware/fingerprint.h"
-#else
 #include <hardware/fingerprint.h>
-#endif
 
 #include <android/hardware/biometrics/fingerprint/2.3/IBiometricsFingerprint.h>
 
@@ -85,9 +80,6 @@ struct BiometricsFingerprint : public IBiometricsFingerprint {
     sp<IBiometricsFingerprintClientCallback> mClientCallback;
     fingerprint_device_t* mDevice;
 
-#ifdef ENABLE_UDFPS
-    android::base::unique_fd touch_fd_;
-#endif
 };
 
 }  // namespace implementation
