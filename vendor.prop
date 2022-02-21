@@ -11,11 +11,15 @@ persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.fluence.voicecall=true
 persist.vendor.audio.fluence.voicecomm=true
 persist.vendor.audio.fluence.voicerec=true
+persist.vendor.audio.hifi=false
 persist.vendor.audio.ras.enabled=false
+persist.vendor.audio.ring.filter.mask=0
 persist.vendor.audio.spv3.enable=true
 ro.af.client_heap_size_kbyte=7168
 ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=11
+ro.vendor.audio.sdk.fluencetype=fluence
+ro.vendor.audio.soundfx.usb=true
 vendor.audio.adm.buffering.ms=6
 vendor.audio.feature.a2dp_offload.enable=true
 vendor.audio.feature.afe_proxy.enable=true
@@ -23,8 +27,10 @@ vendor.audio.feature.anc_headset.enable=true
 vendor.audio.feature.audiozoom.enable=false
 vendor.audio.feature.battery_listener.enable=false
 vendor.audio.feature.compr_cap.enable=false
+vendor.audio.feature.compr_voip.enable=false
 vendor.audio.feature.compress_in.enable=false
 vendor.audio.feature.compress_meta_data.enable=true
+vendor.audio.feature.compr_voip.enable=false
 vendor.audio.feature.concurrent_capture.enable=false
 vendor.audio.feature.custom_stereo.enable=true
 vendor.audio.feature.deepbuffer_as_primary.enable=false
@@ -78,6 +84,7 @@ vendor.audio.usb.disable.sidetone=true
 vendor.audio.use.sw.alac.decoder=true
 vendor.audio.use.sw.ape.decoder=true
 vendor.audio.volume.headset.gain.depcal=true
+vendor.voice.path.for.pcm.voip=false
 
 # Bluetooth
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac
@@ -95,6 +102,13 @@ vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
 camera.disable_zsl_mode=1
+
+# Chipset
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SM7150
+
+# Crypto
+ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Dalvik
 dalvik.vm.dex2oat64.enabled=true
@@ -117,6 +131,7 @@ debug.egl.hw=0
 debug.mdpcomp.logs=0
 debug.sf.disable_backpressure=1
 debug.sf.enable_hwc_vds=1
+debug.sf.frame_rate_multiple_threshold=120
 debug.sf.hw=0
 debug.sf.latch_unsignaled=1
 ro.surface_flinger.protected_contents=true
@@ -128,14 +143,25 @@ ro.surface_flinger.has_wide_color_display=true
 ro.surface_flinger.has_HDR_display=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.max_virtual_display_dimension=4096
+ro.surface_flinger.set_display_power_timer_ms=1000
+ro.surface_flinger.set_idle_timer_ms=80
+ro.surface_flinger.set_touch_timer_ms=200
+ro.surface_flinger.use_content_detection_for_refresh_rate=true
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
+ro.vendor.display.ad=1
+ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg
+ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg
+ro.vendor.display.sensortype=2
 vendor.display.comp_mask=0
 vendor.display.dataspace_saturation_matrix=1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0
 vendor.display.disable_decimation=1
 vendor.display.disable_excl_rect=0
 vendor.display.disable_excl_rect_partial_fb=1
 vendor.display.disable_hw_recovery_dump=1
+vendor.display.disable_idle_time_hdr=1
+vendor.display.disable_idle_time_video=1
+vendor.display.disable_rotator_downscale=1
 vendor.display.disable_inline_rotator=1
 vendor.display.disable_scaler=0
 vendor.display.disable_ui_3d_tonemap=1
@@ -144,6 +170,17 @@ vendor.display.enable_null_display=0
 vendor.display.enable_optimize_refresh=1
 vendor.gralloc.disable_ubwc=0
 vendor.display.qdcm.mode_combine=1
+vendor.display.idle_time=0
+vendor.display.idle_time_inactive=0
+
+# Display (phase offsets)
+debug.sf.use_phase_offsets_as_durations=1
+debug.sf.late.sf.duration=10500000
+debug.sf.late.app.duration=16600000
+debug.sf.early.sf.duration=16600000
+debug.sf.early.app.duration=16600000
+debug.sf.earlyGl.sf.duration=16600000
+debug.sf.earlyGl.app.duration=16600000
 
 # Display - Set color mode to Adaptive by default
 persist.sys.sf.color_saturation=1.0
