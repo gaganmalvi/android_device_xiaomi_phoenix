@@ -91,7 +91,7 @@ ODM_MANIFEST_PHOENIX_FILES := \
     $(DEVICE_PATH)/configs/hidl/manifest-qva.xml \
     $(DEVICE_PATH)/configs/hidl/manifest-nfc.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
-    $(COMMON_PATH)/configs/hidl/device_framework_compatibility_matrix.xml \
+    $(DEVICE_PATH)/configs/hidl/device_framework_compatibility_matrix.xml \
     vendor/qcom/opensource/core-utils/vendor_framework_compatibility_matrix.xml
 
 # Init
